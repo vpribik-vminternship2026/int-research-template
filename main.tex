@@ -1,0 +1,145 @@
+% Compile: pdflatex report -> biber report -> pdflatex report -> pdflatex report
+%      or: latexmk -pdf report.tex
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage[style=apa,backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+\title{Read-Only API Service: Local Read Model vs.\ Per-Request Aggregation}
+\author{Your Name \\ Team, Company}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent
+% Executive summary. One paragraph: question, approach, finding, recommendation.
+% Write this last. State the recommendation explicitly.
+
+This is an abstract  \parencite{richardson2018}
+
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+
+\subsection{Background}
+% Why this question came up, and what system it concerns.
+
+\subsection{Problem statement}
+% Name the options in the vocabulary the literature uses, so citations follow:
+% (i) local read model populated by upstream services (CQRS read model);
+% (ii) per-request aggregation of upstream APIs (API composition).
+
+\subsection{Scope}
+% In scope / out of scope.
+
+\section{Methodology}
+
+\subsection{Literature search}
+% Sources searched, search terms, date range, inclusion and exclusion criteria.
+
+\subsection{Internal inputs}
+% Interviews, monitoring data, existing design documents.
+
+\subsection{Evaluation criteria}
+% Define criteria here, before presenting findings.
+
+\begin{table}[h]
+\centering
+\caption{Evaluation criteria.}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Criterion & Definition / how measured & Weight \\
+\midrule
+Data freshness        & & \\
+Read latency          & & \\
+Availability          & & \\
+Query capability      & & \\
+Operational cost      & & \\
+Implementation effort & & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Experimental setup}
+% Only if you benchmarked: dataset, load profile, tool, runs, what was constant.
+
+\section{Findings}
+% Organise by option or by criterion, never source by source.
+
+\subsection{Option A}
+
+\subsection{Option B}
+
+\subsection{Disagreement between sources}
+
+\subsection{Measurement results}
+
+\section{Analysis}
+
+\subsection{Comparison against criteria}
+
+\begin{table}[h]
+\centering
+\caption{Option comparison.}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Criterion & Option A & Option B \\
+\midrule
+Data freshness        & & \\
+Read latency          & & \\
+Availability          & & \\
+Query capability      & & \\
+Operational cost      & & \\
+Implementation effort & & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Trade-offs}
+
+\subsection{Risks}
+
+\subsection{Conditions that would change the answer}
+
+\section{Limitations and Assumptions}
+
+\section{Recommendation and Next Steps}
+
+\subsection{Recommendation}
+
+\subsection{Rejected alternatives}
+
+\subsection{Next steps}
+
+% Cite with \cite{key}, e.g. \cite{richardson2018}. Keys are in references.bib.
+% Use \nocite{*} only while drafting, to check the bibliography renders.
+\printbibliography[heading=bibnumbered]
+
+\appendix
+
+\section{Research Log}
+% Every source screened, including rejected ones.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}llll@{}}
+\toprule
+Date & Source & Type & Claim taken / reason rejected \\
+\midrule
+ & & & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Raw Data}
+
+\end{document}
